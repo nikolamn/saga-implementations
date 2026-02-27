@@ -1,0 +1,40 @@
+# Maven / Gradle build outputs
+target/
+build/
+out/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+bin/
+
+# STS (Spring Tool Suite) metadata
+.factorypath
+
+# IntelliJ (if someone opens project there)
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Spring Boot temporary files
+*.pid
+*.gz
+*.zip
+
+# Local configuration overrides
+application-local.properties
+application-dev.properties
+
+# Java class files (if any slip in)
+*.class
+
+# Packaging outputs
+*.jar
+*.war

@@ -1,0 +1,16 @@
+services:
+  booking-api-gateway:
+    image: nginx:1.26.1
+    container_name: booking-api-gateway
+    ports:
+      - "${GATEWAY_PORT}:80"
+    volumes:
+      - ./booking-api-gateway/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${GATEWAY_CERT_PATH}:/etc/nginx/certs/local-gateway.crt
+      - ${GATEWAY_KEY_PATH}:/etc/nginx/certs/local-gateway.key
+
+  booking-auth-service:
+    container_name: booking-auth-service
+    build:
+      context: ./booking-auth-service
+      dockerfile: Dockerfile
