@@ -1,10 +1,10 @@
-package com.niko.hotel;
+package com.nikodev.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HotelApplicationTests {
+class AuthApplicationTests {
 
 	@Test
 	void contextLoads() {

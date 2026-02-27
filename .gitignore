@@ -1,44 +1,10 @@
-### Eclipse ###
-*.class
-*.log
+*.key
+*.crt
+*.csr
+/.metadata/
 
-# Eclipse project files
-.settings/
-.project
-.classpath
-bin/
-target/
-build/
 
-# Eclipse metadata
-.metadata/
-RemoteSystemsTempFiles/
-.springBeans
+*.env
 
-### Java / Spring Boot ###
-# Compiled class files
-*.class
-
-# Package files
-*.jar
-*.war
-*.nar
-*.ear
-
-# Maven
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-
-# Gradle
-.gradle/
-build/
-
-# Spring Boot temporary files
-!/.mvn/wrapper/maven-wrapper.jar
-
-### OS Files ###
-.DS_Store
-Thumbs.db
+booking-api-gateway/certs/
+README.CERTS.md

@@ -1,13 +1,13 @@
-package com.niko.hotel;
+package com.nikodev.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HotelApplication {
+public class AuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HotelApplication.class, args);
+		SpringApplication.run(AuthApplication.class, args);
 	}
 
 }
