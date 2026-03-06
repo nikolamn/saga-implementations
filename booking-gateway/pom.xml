@@ -9,7 +9,7 @@
 		<version>3.5.11</version>
 		<relativePath />
 	</parent>
-	<groupId>com.nikodev</groupId>
+	<groupId>com.booking</groupId>
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gateway</name>
