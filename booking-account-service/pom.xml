@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.booking</groupId>
-	<artifactId>auth</artifactId>
+	<artifactId>account</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>auth</name>
-	<description>Booking Auth Service</description>
+	<name>account</name>
+	<description>Booking Account Service</description>
 	<url/>
 	<licenses>
 		<license/>
