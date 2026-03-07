@@ -38,3 +38,5 @@ coverage/
 *.tmp
 *.swp
 *.swo
+
+*.bat

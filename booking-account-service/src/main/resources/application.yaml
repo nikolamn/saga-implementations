@@ -3,3 +3,12 @@ spring:
     name: account
 server:
   port: 8082
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+    health:
+      show-details: always
