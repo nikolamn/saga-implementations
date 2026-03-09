@@ -24,3 +24,8 @@ management:
         include: health
     health:
       show-details: always
+app:
+  jwt:
+    secret:
+    expiration:
+      minutes:
