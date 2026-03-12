@@ -5,12 +5,10 @@ import java.util.Optional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.booking.auth.api.rest.dto.AuthRegisterRequest;
 import com.booking.auth.api.rest.mapper.AuthUserMapper;
 import com.booking.auth.core.domain.AuthUser;
 import com.booking.auth.core.repository.AuthUserRepository;
 import com.booking.auth.core.service.AuthUserService;
-import com.booking.auth.exception.DuplicateUserInfoException;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,17 +20,17 @@ public class AuthUserServiceImpl implements AuthUserService {
 	private final AuthUserMapper mapper;
 	private final PasswordEncoder passwordEncoder;
 
-	@Override
-	public void saveAuthUser(AuthRegisterRequest dto) {
-		if (repository.existsByUsername(dto.getUsername())) {
-			throw new DuplicateUserInfoException("USERNAME TAKEN");
-		}
-
-		AuthUser authUser = mapper.toDomain(dto);
-		authUser.setPasswordHash(passwordEncoder.encode(dto.getPassword()));
-
-		repository.save(authUser);
-	}
+//	@Override
+//	public void saveAuthUser(AuthRegisterRequest dto) {
+//		if (repository.existsByUsername(dto.getUsername())) {
+//			throw new DuplicateUserInfoException("USERNAME TAKEN");
+//		}
+//
+//		AuthUser authUser = mapper.toDomain(dto);
+//		authUser.setPasswordHash(passwordEncoder.encode(dto.getPassword()));
+//
+//		repository.save(authUser);
+//	}
 
 	@Override
 	public Optional<AuthUser> getAuthUserByUsername(String username) {

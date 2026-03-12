@@ -4,10 +4,12 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class AuthRegisterRequest {
+@NoArgsConstructor
+public class AuthUserDTO {
 
 	@NotBlank(message = "Username cannot be empty")
 	@Size(min = 12, max = 20, message = "Username must contain 12 to 20 characters")

@@ -10,8 +10,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import lombok.RequiredArgsConstructor;
-import net.devh.boot.grpc.server.security.authentication.AnonymousAuthenticationReader;
-import net.devh.boot.grpc.server.security.authentication.GrpcAuthenticationReader;
 
 @RequiredArgsConstructor
 @Configuration
@@ -40,10 +38,10 @@ public class SecurityConfig {
 		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
 	}
 	
-	@Bean
-	public GrpcAuthenticationReader grpcAuthenticationReader() {
-	    return (call, headers) -> {
-	        return null; 
-	    };
-	}
+//	@Bean
+//	public GrpcAuthenticationReader grpcAuthenticationReader() {
+//	    return (call, headers) -> {
+//	        return null; 
+//	    };
+//	}
 }

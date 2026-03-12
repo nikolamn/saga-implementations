@@ -5,17 +5,15 @@ import java.util.List;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import com.booking.auth.api.rest.dto.AuthRegisterRequest;
 import com.booking.auth.core.domain.AuthUser;
-import com.booking.auth.core.enums.ERole;
 import com.booking.auth.infrastructure.security.CustomUserDetails;
 
 @Component
 public class AuthUserMapper {
 
-	public AuthUser toDomain(AuthRegisterRequest dto) {
-		return AuthUser.builder().username(dto.getUsername()).role(ERole.toEnum(dto.getRole())).build();
-	};
+//	public AuthUser toDomain(AuthRegisterRequest dto) {
+//		return AuthUser.builder().username(dto.getUsername()).role(ERole.toEnum(dto.getRole())).build();
+//	};
 
 	public CustomUserDetails toCustomAuthUserDetails(AuthUser user, List<SimpleGrantedAuthority> authorities) {
 		CustomUserDetails customUserDetails = new CustomUserDetails();

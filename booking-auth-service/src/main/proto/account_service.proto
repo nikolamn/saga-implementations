@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package com.booking.auth.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.booking.auth.grpc";
+option java_outer_classname = "AccountStatusProto";
+
+service AccountService {
+  rpc CreateAccount(AccountCreationRequest) returns (AccountCreationResponse);
+}
+
+message AccountCreationRequest {
+  string first_name = 1;
+  string last_name = 2;
+  string gender = 3;
+  string birthdate = 4;
+  string email = 5;
+  Address address = 6;
+}
+
+message Address {
+  string country = 1;
+  string city = 2;
+  string street = 3;
+  string number = 4;
+}
+
+message AccountCreationResponse {
+  bool success = 1;
+  string message = 2;
+}

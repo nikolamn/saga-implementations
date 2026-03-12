@@ -1,4 +1,4 @@
-package com.booking.auth.infrastructure.repository.impl;
+package com.booking.auth.infrastructure.persistence.impl;
 
 import java.util.Optional;
 import java.util.UUID;
