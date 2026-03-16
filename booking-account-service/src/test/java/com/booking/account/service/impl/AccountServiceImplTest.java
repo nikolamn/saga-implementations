@@ -5,9 +5,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.booking.account.api.rest.mapper.AccountMapper;
-import com.booking.account.core. repository.AccountRepository;
-import com.booking.account.core.service.impl.AccountServiceImpl;
+import com.booking.account.mapper.AccountMapper;
+import com.booking.account.repository.AccountRepository;
+import com.booking.account.service.impl.AccountServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 public class AccountServiceImplTest {

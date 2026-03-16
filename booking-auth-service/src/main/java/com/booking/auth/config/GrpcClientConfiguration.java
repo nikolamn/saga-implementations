@@ -3,7 +3,7 @@ package com.booking.auth.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.booking.auth.grpc.AccountServiceGrpc;
+import com.booking.grpc.stubs.AccountServiceGrpc;
 
 import net.devh.boot.grpc.client.inject.GrpcClient;
 

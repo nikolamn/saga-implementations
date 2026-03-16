@@ -8,9 +8,9 @@ import com.booking.auth.client.AccountServicePort;
 import com.booking.auth.dto.common.AccountDTO;
 import com.booking.auth.exception.DuplicateUserInfoException;
 import com.booking.auth.exception.GrpcInvalidArgumentException;
-import com.booking.auth.grpc.AccountCreationRequest;
-import com.booking.auth.grpc.AccountServiceGrpc;
 import com.booking.auth.mapper.AccountMapper;
+import com.booking.grpc.stubs.AccountCreationRequest;
+import com.booking.grpc.stubs.AccountServiceGrpc;
 
 import io.grpc.StatusRuntimeException;
 import lombok.RequiredArgsConstructor;

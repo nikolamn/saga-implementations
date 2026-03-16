@@ -22,16 +22,16 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -d '{
         "authUser": {
-            "username":"n32354999344",
+            "username":"1n00=00000344",
             "password":"strongPassword",
             "role":"HOST"
             },
         "account": {
             "firstName":"wewedfsdfsdsdss",
             "lastName":"fdfdsfsdfsdf",
-            "email":"11116@gmail.com",
+            "email":"11338886@gmail.com",
             "gender":"MALE",
-            "birthdate":"1990-10-10",
+            "birthdate":"199010-10",
             "address": {
                 "country":"222222",
                 "city":"Howling Abyss",
