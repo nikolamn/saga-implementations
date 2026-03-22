@@ -1,7 +1,6 @@
 package com.booking.auth.dto.common;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -23,8 +22,4 @@ public class UserDTO {
 	@Size(min = 8, max = 64, message = "Password must contain between 8 and 64 characters")
 	@Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d).+$", message = "Password must contain at least one letter and one number.")
 	private String password;
-
-	@Pattern(regexp = "GUEST|HOST", message = "Role must be GUEST or HOST")
-	@NotNull(message = "Role must be specified")
-	private String role;
 }

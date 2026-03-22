@@ -18,52 +18,34 @@ curl -X GET -i http://localhost:8080/actuator/health
 ```bash
 curl -X GET -i http://localhost:8080/auth/actuator/health
 curl -X GET -i http://localhost:8081/actuator/health
-curl -X POST \
+curl -X POST http://localhost:8081/auth/signup  \
     -H "Content-Type: application/json" \
     -d '{
         "user": {
-            "username":"myGod11223344",
-            "password":"myGod11223344",
-            "role":"HOST"
+            "username":"myGo4d11223344",
+            "password":"myGod11223344"
             },
         "account": {
             "firstName":"wewedfsdfsdsdss",
             "lastName":"fdfdsfsdfsdf",
-            "email":"mygod@gmail.com",
-            "gender":"MALE",
-            "birthdate":"1990-10-10",
-            "address": {
-                "country":"222222",
-                "city":"sadsad",
-                "street":"sdfsd",
-                "number":"999999"
-            }
+            "email":"my4544gdod@gmail.com",
+            "birthdate":"1990-10-10"
         }
     }' \
-    -i http://localhost:8081/auth/signup 
+    -i 
     
 curl -X POST http://localhost:8081/auth/signin  \
     -H "Content-Type: application/json" \
     -d '{
-        "username":"myGod11223344",
+        "username":"myGo4d11223344",
         "password":"myGod11223344"
         }
     }' \
     -i 
-
-curl -i -X PATCH http://localhost:8081/user/update \
-    -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NzM5ODA5MzgsImV4cCI6MTc3Mzk4NDUzOCwianRpIjoiNGEyOGFjMTEtZWUwYi00ZWViLTg0N2UtMDVhYTMzMWYxYmVjIiwic3ViIjoiOTJmM2M5NTEtMzhjNi00M2E4LWIwNDQtYzFhZDg2OGE4M2M3IiwidXNlcm5hbWUiOiJteUdvZDExMjIzMzQ0Iiwicm9sZSI6WyJST0xFX0hPU1QiXX0.5psJu_oPTaPgbIttqE6K4QbqowOy6tkXAR6eWN5pGEJBm7dn_NDpsi4e-5umes0c3vCMgpYR7GPh92qwtW-L8Q" \
+curl -X GET http://localhost:8081/actuator/health  \
     -H "Content-Type: application/json" \
-    -d '{
-        "user": {
-            "username": "aaaaa555555aaaa"
-        },
-        "account": {
-            "firstName": "ramdp,",
-            "lastName": "letstry",
-            "gender": "MALE"
-        }
-    }'
+    -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NzQyMDE3NTQsImV4cCI6MTc3NDIwNTM1NCwianRpIjoiN2E5MmNkMjgtZDIyNy00ZmE1LTg5ZjctYmVmMmExMmRlZjNmIiwic3ViIjoiMjViNGUyMDgtZjIwZi00ZjE0LWEwZTUtY2E4MjE2OGRlZThjIiwidXNlcm5hbWUiOiJteUdvNGQxMTIyMzM0NCJ9.fkgiXD7yEOQgcxosgdohxErwi696SNWcpafB6o7eWt7Ia6AGGq-SE48GgMlxJzlYJzxeDFunahuj0g--UTjslQ" \
+    -i 
 
 Grpc test
 curl -i http://localhost:8081/greet?name=Gaze

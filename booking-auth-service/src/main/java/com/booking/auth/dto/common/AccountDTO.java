@@ -1,8 +1,6 @@
 package com.booking.auth.dto.common;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 
 @Getter
@@ -18,13 +16,6 @@ public class AccountDTO {
 	@NotBlank(message = "Email cannot be empty")
     private String email;
 
-	@NotBlank(message = "Gender cannot be empty")
-    private String gender;
-
 	@NotBlank(message = "Birthday cannot be empty")
     private String birthdate;
-	
-	@NotNull(message = "Address cannot be empty")
-    @Valid
-    private AddressDTO address;
 }

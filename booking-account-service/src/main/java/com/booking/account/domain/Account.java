@@ -6,16 +6,14 @@ import java.util.UUID;
 import org.hibernate.annotations.JdbcType;
 import org.hibernate.dialect.PostgreSQLEnumJdbcType;
 
-import com.booking.account.enums.EGender;
+import com.booking.account.enums.EStatus;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -53,11 +51,6 @@ public class Account {
     @Size(min = 2, max = 20)
     @Column(name = "last_name", nullable = false, length = 20)
     private String lastName;
-    
-	@NotNull
-	@JdbcType(PostgreSQLEnumJdbcType.class)
-	@Column(name = "gender", nullable = false)
-    private EGender gender;
 	
 	@NotNull
 	@Column(name = "birthdate", nullable = false)
@@ -67,8 +60,9 @@ public class Account {
     @Email
     @Column(name = "email", nullable = false, unique = true)
 	private String email;
-    
-	@Valid
-    @Embedded
-    private Address address;
+	
+	@NotNull
+	@JdbcType(PostgreSQLEnumJdbcType.class)
+	@Column(name = "status", nullable = false)
+	private EStatus status;
 }

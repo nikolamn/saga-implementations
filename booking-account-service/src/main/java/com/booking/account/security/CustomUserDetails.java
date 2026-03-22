@@ -1,4 +1,4 @@
-package com.booking.auth.security;
+package com.booking.account.security;
 
 import java.util.Collection;
 import java.util.Collections;

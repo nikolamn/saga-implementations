@@ -8,13 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.booking.account.dto.common.AccountDTO;
-import com.booking.account.dto.common.UpdateAccountDTO;
 import com.booking.account.exception.ValidationException;
 import com.booking.account.grpc.service.AccountGrpcService;
 import com.booking.account.mapper.AccountMapper;
 import com.booking.account.service.AccountService;
 import com.booking.grpc.stubs.AccountCreationRequest;
-import com.booking.grpc.stubs.AccountUpdateRequest;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
@@ -37,13 +35,6 @@ public class AccountGrpcServiceImpl implements AccountGrpcService {
 		validateDto(dto);
 
 		accountService.save(dto);
-	}
-
-	@Override
-	public void update(AccountUpdateRequest request) {
-		UpdateAccountDTO dto = mapper.grpcToUpdateDTO(request);
-		
-		accountService.update(dto);
 	}
 	
 	private <T> void validateDto(T dto) {

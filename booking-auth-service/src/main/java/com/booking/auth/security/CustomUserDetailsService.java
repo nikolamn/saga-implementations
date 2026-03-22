@@ -1,8 +1,5 @@
 package com.booking.auth.security;
 
-import java.util.List;
-
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -28,13 +25,10 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     private CustomUserDetails toUserDetails(User user) {
-        List<SimpleGrantedAuthority> authorities = List.of(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()));
-
         return CustomUserDetails.builder()
                 .id(user.getId())
                 .username(user.getUsername())
                 .password(user.getPasswordHash())
-                .authorities(authorities)
                 .build();
     }
 }
